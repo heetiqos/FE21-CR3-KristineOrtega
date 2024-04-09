@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>{{product.name}}</h1>
+    <div class="details-flex">
+        <img height="300" src="./assets/img/{{product.image}}" alt="">
+        <div>
+            <p style="font-weight: bold;">Description:</p>
+            <p>{{product.description}}</p>
+            <br>
+            <p style="font-weight: bold;">Price:</p>
+            <p>{{product.price | currency: "EUR"}}</p>
+            <button *ngIf="product.availability" (click)="onAddToCart(product)" class="btn btn-primary">Add To Cart</button>
+            <p *ngIf="!(product.availability)" style="color: red;"> This product is not available.</p>
+        </div>
+     </div>
+</div>

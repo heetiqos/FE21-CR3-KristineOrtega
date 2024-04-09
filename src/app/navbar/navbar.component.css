@@ -1,0 +1,17 @@
+nav {
+  margin-bottom: 30px;
+}
+
+#cart {
+  width: 70px;
+}
+
+.container-link {
+  position: relative;
+}
+.container-link #cart-length {
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+}/*# sourceMappingURL=navbar.component.css.map */

@@ -1,0 +1,27 @@
+.container {
+  margin-bottom: 150px;
+}
+
+img {
+  width: 80px;
+  height: 100%;
+}
+
+.selectedItems {
+  padding: 10px;
+  margin: 10px;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: grey;
+}
+
+.calcTable {
+  min-width: 20%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 10px 10px 10px 50px;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: grey;
+  text-align: end;
+}/*# sourceMappingURL=cart.component.css.map */

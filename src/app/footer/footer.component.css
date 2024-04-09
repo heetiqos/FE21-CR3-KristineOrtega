@@ -1,0 +1,13 @@
+footer {
+  background-color: black;
+  padding: 20px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 70px;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  color: white;
+}/*# sourceMappingURL=footer.component.css.map */

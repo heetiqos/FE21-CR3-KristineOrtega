@@ -1,0 +1,25 @@
+<div class="container">
+    
+    <h1>PERFUMES</h1>
+    
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+        
+        <div *ngFor="let product of productItems; let i = index">
+            <div>
+                <div class="card" style="width: 95%; padding: 5px; margin: 2rem auto; height:600px;">
+                <img src="./assets/img/{{product.image}}" class="card-img-top" alt="product image">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p>Price: {{product.price | currency: "EUR"}}</p>
+                    <p> {{product.description}}</p>
+                    <div *ngIf="product.availability" class="btns-flex" style="position: absolute; bottom: 15px;"><!--ngIf only runs if the product availability is true-->
+                        <a routerLink="/details/{{i}}" class="btn btn-primary">Details</a>
+                        <button (click)="onAddToCart(product)" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                    <p *ngIf="!(product.availability)" style="color: red">This product is not available.</p><!--! means not or false-->   
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

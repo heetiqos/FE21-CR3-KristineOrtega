@@ -1,0 +1,49 @@
+.container {
+  margin-bottom: 150px;
+  width: 80%;
+  text-align: center;
+}
+
+img {
+  margin: 0;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  margin: auto;
+}
+
+p {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+tr {
+  padding: 15px;
+  font-size: 16px;
+}
+
+table {
+  display: flex;
+  justify-content: space-around;
+}/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,12 @@
+.details-flex{
+    margin: 20px 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .7rem;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+    margin: 30px;
+}

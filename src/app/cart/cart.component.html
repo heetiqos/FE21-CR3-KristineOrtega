@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+    <div class="selectedItems">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cart - {{length}} item(s)</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @for (product of cartItems; track product; let i = $index){
+                    <tr>
+                        <td> <img src="./assets/img/{{product.image}}" height="100"></td>
+                        <td>
+                            <tr style="font-weight: bold;">{{product.name}}</tr>
+                            <tr>{{product.price | currency: "EUR"}}</tr>
+                            <tr>Quantity: {{product.qtty}}</tr>
+                        </td>
+                        
+                        <td>
+                            <button (click)="decQtty(product)" class="btn btn-warning"> - </button>
+                            <button (click)="onDelete(i)" class="btn btn-danger"><i class="fa fa-trash-o" style="font-size:20px; color:white"></i></button>
+                            <button (click)="incQtty(product)" class="btn btn-success"> + </button>
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="calcTable">
+        <table>
+                <tr>Subtotal: {{subtotal| currency: "EUR"}}</tr>
+                <tr>Service: {{subtotal * 0.1| currency: "EUR"}}</tr>
+                <tr>Discount: {{discount | currency: "EUR"}}</tr>
+                <hr>
+                <tr> <h2>Total: {{total | currency:"EUR"}}</h2> </tr>
+                <tr><button class="btn btn-primary">Go to Payment</button></tr>
+        </table>
+    </div>
+    <p style="color: red;">We offer a 15% discount for all purchases of 400€ or more!</p>
+</div>
+
